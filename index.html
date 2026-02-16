@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jayesh Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            background:linear-gradient(to right,#eef2f3,#8e9eab);
+            line-height:1.6;
+        }
+
+        /* HEADER */
+        header{
+            background:linear-gradient(45deg,#1e3c72,#2a5298);
+            color:white;
+            padding:15px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            box-shadow:0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .logo{
+            font-size:24px;
+            font-weight:bold;
+        }
+
+        .nav-links{
+            list-style:none;
+            display:flex;
+            gap:25px;
+        }
+
+        .nav-links a{
+            color:white;
+            text-decoration:none;
+            font-weight:500;
+            transition:0.3s;
+            padding:8px 15px;
+            border-radius:20px;
+        }
+
+        .nav-links a:hover{
+            background:rgba(255,255,255,0.2);
+            color:#ffd700;
+        }
+
+        /* HERO */
+        .hero{
+            background:linear-gradient(to right,#00c6ff,#0072ff);
+            color:white;
+            padding:100px 20px;
+            text-align:center;
+        }
+
+        .hero h2{
+            font-size:40px;
+            margin-bottom:15px;
+        }
+
+        .hero p{
+            font-size:18px;
+        }
+
+        .btn{
+            margin-top:20px;
+            padding:12px 25px;
+            background:white;
+            color:#0072ff;
+            border:none;
+            border-radius:30px;
+            cursor:pointer;
+            font-weight:600;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#ffd700;
+            color:black;
+        }
+
+        /* CARDS */
+        .cards{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            padding:60px 20px;
+            flex-wrap:wrap;
+        }
+
+        .card{
+            background:white;
+            padding:40px;
+            width:260px;
+            text-align:center;
+            border-radius:15px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+            transition:0.4s;
+
+            opacity:0;
+            transform:translateY(30px);
+            animation:fadeUp 1s forwards;
+        }
+
+        .card:hover{
+            transform:translateY(-15px);
+            box-shadow:0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        @keyframes fadeUp{
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+        /* FOOTER */
+        footer{
+            background:#1e3c72;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px){
+
+            header{
+                flex-direction:column;
+                gap:15px;
+                text-align:center;
+            }
+
+            .nav-links{
+                flex-direction:column;
+                gap:15px;
+            }
+
+            .hero h2{
+                font-size:28px;
+            }
+
+            .card{
+                width:90%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Jayesh Website</div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</header>
+
+<section class="hero">
+    <h2>Welcome Jayesh 👋</h2>
+    <p>Modern Designed Responsive Website</p>
+    <button class="btn">Explore More</button>
+</section>
+
+<section class="cards">
+    <div class="card">
+        <h3>🌐 Web Design</h3>
+        <p>Modern and creative website design</p>
+    </div>
+
+    <div class="card">
+        <h3>💻 Development</h3>
+        <p>High quality responsive development</p>
+    </div>
+
+    <div class="card">
+        <h3>🚀 Projects</h3>
+        <p>Professional real world projects</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Jayesh Website | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
